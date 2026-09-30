@@ -14,6 +14,14 @@ This plugin is designed to display JSON strings in a Treeview format and highlig
 5. Voila, that's it! If the JSON is valid, it will be displayed in a Treeview format.
 
 
+## Format JSON Lines
+
+Use **Plugins > JSON Viewer > Format JSON Lines** (directly below **Format JSON**) to pretty-print each JSON record in the selection, or the whole document when nothing is selected. Each nonblank input line must contain one complete JSON value. Blank lines are skipped.
+
+The command uses the existing indentation, array formatting, line ending, comment, and trailing comma settings. It preserves record order and numeric precision, and retains a final newline if present. If any record is invalid, no text is replaced; the error identifies the input line and highlights the original error position.
+
+The output contains pretty-printed JSON documents spanning multiple lines; it is no longer strict JSONL. The existing tree viewer and other commands still accept a single JSON document.
+
 ## Latest Updates:
 
 ### 2.2.0.0
